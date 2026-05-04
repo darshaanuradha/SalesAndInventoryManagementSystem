@@ -33,6 +33,7 @@
             btnNewSale = new Button();
             btnInventory = new Button();
             btnCustomers = new Button();
+            panel1 = new Panel();
             SuspendLayout();
             // 
             // label1
@@ -86,11 +87,19 @@
             btnCustomers.UseVisualStyleBackColor = true;
             btnCustomers.Click += btnCustomers_Click;
             // 
+            // panel1
+            // 
+            panel1.Location = new Point(15, 47);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(773, 382);
+            panel1.TabIndex = 5;
+            // 
             // frmDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(panel1);
             Controls.Add(btnCustomers);
             Controls.Add(btnInventory);
             Controls.Add(btnNewSale);
@@ -110,5 +119,6 @@
         private Button btnNewSale;
         private Button btnInventory;
         private Button btnCustomers;
+        private Panel panel1;
     }
 }
