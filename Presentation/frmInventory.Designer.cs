@@ -43,6 +43,8 @@
             btnUpdate = new Button();
             btnDelete = new Button();
             btnClear = new Button();
+            productGridView = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)productGridView).BeginInit();
             SuspendLayout();
             // 
             // btnBackDash
@@ -144,6 +146,7 @@
             btnInsert.TabIndex = 12;
             btnInsert.Text = "Insert";
             btnInsert.UseVisualStyleBackColor = true;
+            btnInsert.Click += btnInsert_Click;
             // 
             // btnUpdate
             // 
@@ -153,6 +156,7 @@
             btnUpdate.TabIndex = 13;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnDelete
             // 
@@ -162,6 +166,7 @@
             btnDelete.TabIndex = 14;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnClear
             // 
@@ -171,12 +176,23 @@
             btnClear.TabIndex = 15;
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
+            // 
+            // productGridView
+            // 
+            productGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            productGridView.Location = new Point(24, 184);
+            productGridView.Name = "productGridView";
+            productGridView.Size = new Size(747, 254);
+            productGridView.TabIndex = 16;
+            productGridView.CellContentClick += productGridView_CellContentClick;
             // 
             // frmInventory
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(productGridView);
             Controls.Add(btnClear);
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
@@ -194,6 +210,7 @@
             Controls.Add(btnBackDash);
             Name = "frmInventory";
             Text = "frmInventory";
+            ((System.ComponentModel.ISupportInitialize)productGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -215,5 +232,6 @@
         private Button btnUpdate;
         private Button btnDelete;
         private Button btnClear;
+        private DataGridView productGridView;
     }
 }
